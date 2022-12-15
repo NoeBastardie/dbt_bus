@@ -1,0 +1,53 @@
+
+version: 2
+
+sources:
+  - name: bus_dataset
+    database: midyear-cursor-371415
+    schema: bus_dataset
+    tables:
+      - name: staging__incident
+      - name: staging__bus_loc
+
+models:
+  - name: bus_incident
+    description: "A test dbt model"
+    columns:
+      - name: date_analysis
+        description: "The date of the analysis"
+      - name: route_id
+        description: "ID of the route"
+      - name: IncidentType
+        description: "The IncidentType"
+      - name: Description
+        description: "Description of the incident"
+      - name: IncidentID
+        description: "The IncidentID"
+      - name: number_of_bus
+        description: "The number of bus"
+
+models:
+  - name: bus_pos_w_incident
+    description: "A test dbt model"
+    columns:
+      - name: VehicleID
+        description: "The ID of the bus"
+      - name: TripID
+        description: "The ID of the trip"
+      - name: BlockNumber
+        description: "The BlockNumber"
+      - name: bus_coordiante
+        description: "The GPS coordinate of the bus"
+      - name: date_analysis
+        description: "The date of the analysis"
+      - name: TripStartTime
+        description: "The datetime of the begining of the trip"
+      - name: route_id
+        description: "ID of the route"
+      - name: IncidentType
+        description: "The IncidentType"
+      - name: Description
+        description: "Description of the incident"
+      - name: IncidentID
+        description: "The IncidentID"
+
