@@ -50,4 +50,7 @@ models:
         description: "Description of the incident"
       - name: IncidentID
         description: "The IncidentID"
-
+      - name: is_bus_impacted
+        description: "True if the bus is impacted by an incident"
+      - name: last_update
+        description: "Datetime of the last update of coordinates"
